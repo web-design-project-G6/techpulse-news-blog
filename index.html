@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>techpulse-news-blog</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>techpulse-news-blog</title>
 </head>
 
 <body>
-<header class="border-b border-gray-200 bg-white">
+    <header class="border-b border-gray-200 bg-white">
         <div class="flex h-20 items-center justify-between px-16 lg:px-32">
 
             <!-- Logo -->
@@ -24,18 +24,15 @@
             <!-- Navigation -->
             <nav class="hidden items-center gap-8 md:flex">
 
-                <a href="#"
-                    class="border-b-2 border-blue-600 pb-2 text-sm font-semibold text-blue-600">
+                <a href="#" class="border-b-2 border-blue-600 pb-2 text-sm font-semibold text-blue-600">
                     Home
                 </a>
 
-                <a href="./pages/news.html"
-                    class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
+                <a href="./pages/news.html" class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
                     News
                 </a>
 
-                <a href="./pages/blog.html"
-                    class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
+                <a href="./pages/blog.html" class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
                     Blog
                 </a>
 
@@ -59,7 +56,46 @@
         </div>
     </header>
 
-  <script type="module" src="/src/main.ts"></script>
+    <!-- =========================
+        HERO SECTION
+    ========================== -->
+    <section class="bg-[#0d1220]">
+        <div class="grid items-center gap-10 px-6 py-12 lg:grid-cols-2 lg:px-32 lg:py-16">
+
+            <!-- Hero Text -->
+            <div class="text-white">
+
+                <h1 class="max-w-xl text-3xl font-extrabold leading-tight sm:text-4xl">
+                    The Next Generation of AI:
+                    What to Expect in 2026
+                </h1>
+
+                <p class="mt-5 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+                    From smarter assistants to AI agents, here's what experts
+                    predict for the future of artificial intelligence and how
+                    it will change our daily lives.
+                </p>
+
+                <a href="#"
+                    class="mt-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-700">
+                    Read Full Article
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <!-- Hero Image -->
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80"
+                    alt="Artificial Intelligence"
+                    class="h-[280px] w-full rounded-xl object-cover sm:h-[330px]">
+            </div>
+
+        </div>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
