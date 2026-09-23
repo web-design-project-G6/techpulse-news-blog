@@ -1,16 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechPulse News</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <a href="../index.html">Home</a>
-    <a href="#">News</a>
-    <a href="./Blog.html">Blog</a>
-    <a href="./categories.html">Categories</a>
-    <h1 class="bg-amber-400">Hall</h1>
-    <script type="module" src="/src/main.ts"></script>
+
+<body class="bg-slate-50 text-slate-800">
+    <!-- ================= HEADER ================= -->
+    <header class="bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-8 lg:px-8
+                    h-14 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <span class="w-10 h-10 rounded-md bg-blue-600 text-white
+             flex items-center justify-center text-xl">
+                    <i class="bi bi-lightning-fill"></i>
+                </span>
+                <p class="text-2xl">TechPulse</p>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="flex items-center gap-6 text-[20px]">
+                <a href="../index.html" class="text-slate-600 hover:text-blue-600 transition"> Home</a>
+                <a href="#" class="text-blue-600 font-semibold border-b-2
+                           border-blue-600 ">News</a>
+                <a href="./Blog.html" class="text-slate-600 hover:text-blue-600 transition"> Blog</a>
+                <a href="./categories.html" class="text-slate-600 hover:text-blue-600 transition"> Categories⌄ </a>
+                <span class="text-slate-500">
+                    <i class="bi bi-circle-half"></i>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <header class="bg-[#08182d] text-white">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-10 py-20">
+
+            <div class="max-w-2xl">
+
+                <span class="inline-block bg-slate-700/50 text-slate-300
+                           rounded-full px-3 py-1 mb-3
+                           text-[10px] tracking-wider">
+                    ⚡ AUTOMOTIVE ENGINEERING FEED
+                </span>
+
+                <h1 class="text-5xl md:text-5xl font-bold mb-4">
+                    Latest Technology News
+                </h1>
+
+                <p class="text-[9px] md:text-[14px] py-3
+                          text-slate-300 leading-4 max-w-xl">
+                    Stay updated with the newest tech news, trends, and
+                    innovations shaping enterprise architectures,
+                    global hardware, and artificial intelligence.
+                </p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="max-w-7xl mx-auto px-5 lg:px-9 py-10">
+
+        <div class="flex flex-wrap gap-2 mb-8">
+            <button onclick="filterCards('all')"
+                class="filter-btn px-5 py-1.5 rounded-full bg-blue-600 text-white text-[18px]"> All
+            </button>
+            <button onclick="filterCards('AI')" class="filter-btn px-5 py-1.5 rounded-full bg-white border border-slate-200
+                 text-slate-500 text-[18px] hover:text-blue-600 hover:border-blue-300"> AI
+            </button>
+            <button onclick="filterCards('GADGETS')" class="filter-btn px-5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-500 text-[18px]
+                 hover:text-blue-600 hover:border-blue-300"> Gadgets </button>
+            <button onclick="filterCards('SOFTWARE')" class="filter-btn px-5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-500 text-[18px]
+                 hover:text-blue-600 hover:border-blue-300">
+                Software </button>
+            <button onclick="filterCards('CYBERSECURITY')" class="filter-btn px-5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-500 text-[18px]
+                 hover:text-blue-600 hover:border-blue-300">
+                Cybersecurity </button>
+            <button onclick="filterCards('PROGRAMMING')" class="filter-btn px-5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-500 text-[18px]
+                 hover:text-blue-600 hover:border-blue-300">
+                Programming </button>
+            <button onclick="filterCards('EMERGING TECH')" class="filter-btn px-5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-500 text-[18px]
+                 hover:text-blue-600 hover:border-blue-300">
+                Emerging Tech </button>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <article data-category="AI"
+                class="news-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative">
+                    <img src="./imag/image 1..jpeg" alt="Artificial Intelligence" class="w-full h-36 object-cover">
+                    <span
+                        class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-[10px] font-semibold">
+                        AI
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-[16px] font-bold text-slate-900 leading-4"> OpenAI Launches GPT-5 with Better
+                        Reasoning </h2>
+                    <p class="text-[12px] text-slate-500 leading-3.5 mt-2"> OpenAI has announced GPT-5, a new model with
+                        improved reasoning and multimodal capabilities. </p>
+                    <div class="flex items-center gap-1.5 mt-3 text-[12px] text-slate-400">
+                        <span
+                            class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                            TP
+                        </span>
+                        <span>TechPulse Team</span>
+                        <span>•</span>
+                        <span>Apr 25, 2025</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded text-[14px]">
+                        Read More → </a>
+                </div>
+            </article>
+
+            <article data-category="GADGETS"
+                class="news-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative">
+                    <img src="./imag/image 2.jpg" alt="Samsung Galaxy S25" class="w-full h-36 object-cover">
+                    <span
+                        class="absolute top-2 left-2 bg-white text-slate-600 px-2 py-1 rounded text-[10px] font-semibold">
+                        GADGETS
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-[16px] font-bold text-slate-900 leading-4"> Samsung Unveils Galaxy S25 Series </h2>
+                    <p class="text-[12px] text-slate-500 leading-3.5 mt-2"> Samsung introduces the Galaxy S25 with
+                        upgraded camera and AI features. </p>
+                    <div class="flex items-center gap-1.5 mt-3 text-[12px] text-slate-400">
+                        <span
+                            class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                            JS </span>
+                        <span>Jane Smith</span>
+                        <span>•</span>
+                        <span>Apr 24, 2025</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded text-[14px]">
+                        Read More → </a>
+                </div>
+
+            </article>
+            <article data-category="SOFTWARE"
+                class="news-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative">
+                    <img src="imag/image 3.jpg" alt="Windows 12" class="w-full h-36 object-cover">
+                    <span
+                        class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-[10px] font-semibold">
+                        SOFTWARE
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-[16px] font-bold text-slate-900 leading-4"> Windows 12: What's New? </h2>
+                    <p class="text-[12px] text-slate-500 leading-3.5 mt-2"> Microsoft gives a first look at Windows 12
+                        with AI tools and a fresh design. </p>
+                    <div class="flex items-center gap-1.5 mt-3 text-[12px] text-slate-400"> <span
+                            class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
+                            DL </span> <span>David Lee</span>
+                        <span>•</span>
+                        <span>Apr 23, 2025</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded text-[14px]">
+                        Read More → </a>
+                </div>
+            </article>
+
+            <article data-category="CYBERSECURITY"
+                class="news-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative">
+                    <img src="imag/image 4.jpg" alt="Cybersecurity" class="w-full h-36 object-cover">
+                    <span
+                        class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-[10px] font-semibold">
+                        CYBERSECURITY
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-[16px] font-bold text-slate-900 leading-4"> New Cyber Attack Targets Small
+                        Businesses </h2>
+                    <p class="text-[12px] text-slate-500 leading-3.5 mt-2"> Experts warn of increasing cyber attacks on
+                        small and medium businesses. </p>
+                    <div class="flex items-center gap-1.5 mt-3 text-[12px] text-slate-400"> <span
+                            class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold">
+                            SK </span>
+                        <span>Sarah Kim</span>
+                        <span>•</span>
+                        <span>Apr 22, 2025</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded text-[14px]">
+                        Read More → </a>
+                </div>
+
+            </article>
+            <article data-category="PROGRAMMING"
+                class="news-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative">
+                    <img src="imag/image 5.jpg" alt="JavaScript" class="w-full h-36 object-cover">
+                    <span
+                        class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-[10px] font-semibold">
+                        PROGRAMMING
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-[16px] font-bold text-slate-900 leading-4"> JavaScript 2025: Top New Features </h2>
+                    <p class="text-[12px] text-slate-500 leading-3.5 mt-2"> Learn about the latest features in
+                        JavaScript and how they can improve your projects. </p>
+                    <div class="flex items-center gap-1.5 mt-3 text-[12px] text-slate-400"> <span
+                            class="w-6 h-6 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center font-bold">
+                            AJ </span>
+                        <span>Alex Johnson</span>
+                        <span>•</span>
+                        <span>Apr 21, 2025</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded text-[14px]">
+                        Read More → </a>
+                </div>
+
+            </article>
+            <article data-category="EMERGING TECH"
+                class="news-card bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative">
+                    <img src="imag/imag 6.jpeg" alt="Virtual Reality" class="w-full h-36 object-cover">
+                    <span
+                        class="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 rounded text-[10px] font-semibold">
+                        EMERGING TECH
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-[16px] font-bold text-slate-900 leading-4"> The Future of Virtual Reality </h2>
+                    <p class="text-[12px] text-slate-500 leading-3.5 mt-2"> VR is becoming more realistic and useful in
+                        education, gaming, and work. </p>
+                    <div class="flex items-center gap-1.5 mt-3 text-[12px] text-slate-400"> <span
+                            class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
+                            MC </span>
+                        <span>Michael Chen</span>
+                        <span>•</span>
+                        <span>Apr 20, 2025</span>
+                    </div>
+                    <a href="#"
+                        class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded text-[14px]">
+                        Read More → </a>
+                </div>
+            </article>
+        </section>
+        <!-- ================= PAGINATION ================= -->
+        <nav class="flex justify-center items-center gap-3 mt-9">
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-white border border-slate-200
+                       rounded text-[20px] text-slate-500">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-blue-600 text-white rounded text-[10px]">
+                1
+            </a>
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-white border border-slate-200
+                       rounded text-[20px]">
+                2
+            </a>
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-white border border-slate-200
+                       rounded text-[20px]">
+                3
+            </a>
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-white border border-slate-200
+                       rounded text-[20px]">
+                4
+            </a>
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-white border border-slate-200
+                       rounded text-[20px]">
+                5
+            </a>
+
+            <a href="#" class="w-10 h-10 flex items-center justify-center
+                       bg-white border border-slate-200
+                       rounded text-[20px]">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+
+        </nav>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+        <section class="mt-9 bg-blue-50 rounded-xl
+                   px-6 py-10 md:px-9
+                   flex flex-col md:flex-row
+                   md:items-center md:justify-between
+                   gap-5">
+
+            <div>
+
+                <h5 class="text-[14px] font-bold
+                           tracking-widest text-blue-600">
+                    DIRECT TO INBOX
+                </h5>
+
+                <h2 class="text-[32px] font-bold
+                           text-slate-900 mt-4">
+                    Stay ahead of the disruption cycle
+                </h2>
+
+                <p class="text-[14px] text-slate-500
+                          mt-2 leading-4 max-w-xl">
+                    Get weekly technical whitepapers,
+                    architectural deep-dives, and market impact
+                    briefs every Tuesday morning.
+                </p>
+
+            </div>
+
+
+            <form class="flex gap-2 w-full md:w-auto">
+
+                <input type="email" placeholder="Enter your email address" class="w-full md:w-60
+                           bg-white border border-slate-200
+                           rounded-md px-3 py-2
+                           text-[14px] outline-none
+                           focus:ring-2 focus:ring-blue-300">
+
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700
+                           text-white rounded-md
+                           px-4 py-2 text-[14px]">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#071229] text-white mt-10">
+
+        <div class="max-w-7xl mx-auto
+                    px-5 lg:px-8 py-9">
+
+            <div class="grid grid-cols-1
+                        sm:grid-cols-3 gap-8">
+
+
+                <!-- TechPulse -->
+                <div>
+
+                    <h3 class="text-xs font-bold ">
+                        <i class="bi bi-lightning-fill text-blue-500">TechPulse</i>
+                    </h3>
+
+                    <p class="text-[14px] text-slate-400
+                              leading-4 mt-3 max-w-xs">
+                        Stay updated. Stay smart. Real technology
+                        insights, emerging software trends, and
+                        authoritative digital analysis for engineers
+                        and industry leaders.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h4 class="text-[14px] font-semibold mb-3">
+                        Quick Links
+                    </h4>
+
+                    <div class="flex flex-col gap-2">
+
+                        <a href="../index.html" class="text-[14px] text-slate-400
+                                   hover:text-white">
+                            Home
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400
+                                   hover:text-white">
+                            News
+                        </a>
+
+                        <a href="./Blog.html" class="text-[14px] text-slate-400
+                                   hover:text-white">
+                            Blog
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400
+                                   hover:text-white">
+                            About
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Categories -->
+                <div>
+
+                    <h4 class="text-[14px] font-semibold mb-3">
+                        Categories
+                    </h4>
+
+                    <div class="grid grid-cols-2 gap-2">
+
+                        <a href="#" class="text-[14px] text-slate-400">
+                            AI
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400">
+                            Gadgets
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400">
+                            Software
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400">
+                            Cybersecurity
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400">
+                            Programming
+                        </a>
+
+                        <a href="#" class="text-[14px] text-slate-400">
+                            Emerging Tech
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-slate-700
+                       mt-7 pt-4
+                       flex flex-col md:flex-row
+                       justify-between gap-3">
+
+                <p class="text-[14px] text-slate-500">
+                    © 2026 TechPulse. All rights reserved.
+                </p>
+
+                <div class="flex gap-4">
+
+                    <a href="#" class="text-[14px] text-slate-500">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="text-[14px] text-slate-500">
+                        Terms of Service
+                    </a>
+
+                    <a href="#" class="text-[14px] text-slate-500">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function filterCards(category) {
+            const cards = document.querySelectorAll(".news-card");
+            cards.forEach(function (card) {
+                const cardCategory = card.getAttribute("data-category"); if (category === "all"
+                    || cardCategory === category) { card.classList.remove("hidden"); } else { card.classList.add("hidden"); }
+            });
+        } 
+    </script>
 </body>
+
 </html>
