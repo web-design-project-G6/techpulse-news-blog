@@ -1,69 +1,87 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="antialiased">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>techpulse-news-blog</title>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
+<body class="bg-white text-gray-900 transition-colors dark:bg-gray-950 dark:text-white">
 
-<body>
-    <header class="border-b border-gray-200 bg-white">
-        <div class="flex h-20 items-center justify-between px-6 lg:px-32">
+    <!-- =========================
+        HEADER
+    ========================== -->
+    <header class="bg-white dark:bg-[#1e293b] border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
 
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-                <div class="flex h-7 w-7 items-center justify-center rounded-md bg-gray-900 text-sm text-blue-500">
+                <div
+                    class="flex h-8 w-8 items-center justify-center rounded-md bg-gray-900 text-sm text-blue-500 dark:bg-blue-500 dark:text-white">
                     <span class="material-icons">bolt</span>
                 </div>
 
-                <span class="text-xl font-extrabold tracking-tight">
+                <span class="text-2xl font-bold tracking-tight">
                     TechPulse
                 </span>
             </a>
 
             <!-- Navigation -->
-            <nav class="hidden items-center gap-8 md:flex">
+            <nav class="hidden md:flex items-center gap-7 text-md font-medium">
 
-                <a href="#" class="border-b-2 border-blue-600 pb-2 text-sm font-semibold text-blue-600">
+                <a href="#"
+                    class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400 pb-1">
                     Home
                 </a>
 
-                <a href="./pages/news.html" class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
+                <a href="./pages/news.html"
+                    class="text-gray-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                     News
                 </a>
 
-                <a href="./pages/blog.html" class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
+                <a href="./pages/blog.html"
+                    class="text-gray-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                     Blog
                 </a>
 
                 <a href="./pages/categories.html"
-                    class="text-sm font-medium text-slate-500 transition hover:text-blue-600">
+                    class="text-gray-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                     Categories
                 </a>
 
+                <!-- Dark Mode Button -->
                 <button
-                    class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-blue-600">
-                    ◐
+                    onclick="toggleDarkMode()"
+                    class="theme-toggle rounded-lg p-2 transition hover:bg-gray-200 dark:hover:bg-gray-800"
+                    aria-label="Switch to dark mode"
+                    title="Dark Mode">
+
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+
                 </button>
 
             </nav>
 
-            <!-- Mobile Menu -->
-            <button class="rounded-lg border border-gray-200 px-4 py-3 md:hidden">
+            <!-- Mobile button -->
+            <button class="md:hidden text-xl dark:text-white">
                 ☰
             </button>
 
         </div>
     </header>
 
+
     <!-- =========================
         HERO SECTION
     ========================== -->
     <section class="bg-[#0d1220]">
+
         <div class="grid items-center gap-10 px-6 py-12 lg:grid-cols-2 lg:px-32 lg:py-16">
 
             <!-- Hero Text -->
@@ -88,19 +106,27 @@
 
             </div>
 
+
             <!-- Hero Image -->
             <div>
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80"
-                    alt="Artificial Intelligence" class="h-[280px] w-full rounded-xl object-cover sm:h-[330px]">
+
+                <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=80"
+                    alt="Artificial Intelligence"
+                    class="h-[280px] w-full rounded-xl object-cover sm:h-[330px]">
+
             </div>
 
         </div>
     </section>
 
+
     <!-- =========================
         LATEST ARTICLES
     ========================== -->
-    <section id="articles" class="bg-white">
+    <section
+        id="articles"
+        class="bg-white text-gray-900 transition-colors dark:bg-gray-950 dark:text-white">
 
         <div class="mx-auto max-w-7xl px-6 py-14 lg:px-0">
 
@@ -108,14 +134,17 @@
             <div class="mb-8 flex items-center justify-between">
 
                 <div class="flex items-center gap-3">
+
                     <div class="h-6 w-1 bg-blue-600"></div>
 
                     <h2 class="text-xl font-extrabold">
                         Latest Articles
                     </h2>
+
                 </div>
 
-                <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700">
+                <a href="#"
+                    class="text-sm font-semibold text-blue-600 hover:text-blue-700">
                     View All Articles →
                 </a>
 
@@ -128,11 +157,12 @@
 
                 <!-- Article 1 -->
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-200 bg-white transition delay-100 duration-100 hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)]">
+                    class="overflow-hidden rounded-lg border border-slate-200 bg-white text-gray-900 transition duration-100 hover:-translate-y-1 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)] dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=80"
+                    <img
+                        src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=80"
                         alt="iPhone"
-                        class="h-48 w-full object-cover hover:scale-110 delay-150 duration-300 ease-in-out">
+                        class="h-48 w-full object-cover transition duration-300 hover:scale-110">
 
                     <div class="p-4">
 
@@ -145,16 +175,18 @@
                             iPhone 17 Review: Small Changes, Big Impact
                         </h3>
 
-                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                             Apple's latest iPhone brings refined design,
                             better battery life, and powerful new features.
                         </p>
 
                         <div
-                            class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                            class="mt-4 flex items-center justify-between border-t border-slate-200 pt-3 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+
                             <span>By Sara Kim</span>
                             <span>Aug 28, 2025</span>
                             <span>◷ 7 min read</span>
+
                         </div>
 
                     </div>
@@ -163,11 +195,12 @@
 
                 <!-- Article 2 -->
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-200 bg-white transition delay-100 duration-100 hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)]">
+                    class="overflow-hidden rounded-lg border border-slate-200 bg-white text-gray-900 transition duration-100 hover:-translate-y-1 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)] dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+                    <img
+                        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
                         alt="Programming code"
-                        class="h-48 w-full object-cover hover:scale-110 delay-150 duration-300 ease-in-out">
+                        class="h-48 w-full object-cover transition duration-300 hover:scale-110">
 
                     <div class="p-4">
 
@@ -180,16 +213,18 @@
                             10 Essential VS Code Extensions for Better Productivity
                         </h3>
 
-                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                             Boost your development workflow with these
                             must-have VS Code extensions.
                         </p>
 
                         <div
-                            class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                            class="mt-4 flex items-center justify-between border-t border-slate-200 pt-3 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+
                             <span>By Dara Tech</span>
                             <span>Aug 27, 2025</span>
                             <span>◷ 5 min read</span>
+
                         </div>
 
                     </div>
@@ -198,11 +233,12 @@
 
                 <!-- Article 3 -->
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-200 bg-white transition delay-100 duration-100 hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)]">
+                    class="overflow-hidden rounded-lg border border-slate-200 bg-white text-gray-900 transition duration-100 hover:-translate-y-1 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)] dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80"
+                    <img
+                        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80"
                         alt="Cybersecurity"
-                        class="h-48 w-full object-cover hover:scale-110 delay-150 duration-300 ease-in-out">
+                        class="h-48 w-full object-cover transition duration-300 hover:scale-110">
 
                     <div class="p-4">
 
@@ -215,16 +251,18 @@
                             5 Common Cybersecurity Mistakes You Should Avoid
                         </h3>
 
-                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                             Simple mistakes can put your data at risk.
                             Here's how to stay safe online.
                         </p>
 
                         <div
-                            class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                            class="mt-4 flex items-center justify-between border-t border-slate-200 pt-3 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+
                             <span>By Nara</span>
                             <span>Aug 26, 2025</span>
                             <span>◷ 5 min read</span>
+
                         </div>
 
                     </div>
@@ -233,11 +271,12 @@
 
                 <!-- Article 4 -->
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-200 bg-white transition delay-100 duration-100 hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)]">
+                    class="overflow-hidden rounded-lg border border-slate-200 bg-white text-gray-900 transition duration-100 hover:-translate-y-1 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)] dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+                    <img
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
                         alt="Startup team"
-                        class="h-48 w-full object-cover hover:scale-110 delay-150 duration-300 ease-in-out">
+                        class="h-48 w-full object-cover transition duration-300 hover:scale-110">
 
                     <div class="p-4">
 
@@ -250,16 +289,18 @@
                             Cambodian Startup Wins $2M in Seed Funding
                         </h3>
 
-                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                             A local fintech startup has just raised $2 million
                             to expand across Southeast Asia.
                         </p>
 
                         <div
-                            class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                            class="mt-4 flex items-center justify-between border-t border-slate-200 pt-3 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+
                             <span>By TechPulse Team</span>
                             <span>Aug 24, 2025</span>
                             <span>◷ 4 min read</span>
+
                         </div>
 
                     </div>
@@ -268,11 +309,12 @@
 
                 <!-- Article 5 -->
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-200 bg-white transition delay-100 duration-100 hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)]">
+                    class="overflow-hidden rounded-lg border border-slate-200 bg-white text-gray-900 transition duration-100 hover:-translate-y-1 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)] dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
+                    <img
+                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
                         alt="Artificial Intelligence"
-                        class="h-48 w-full object-cover hover:scale-110 delay-150 duration-300 ease-in-out">
+                        class="h-48 w-full object-cover transition duration-300 hover:scale-110">
 
                     <div class="p-4">
 
@@ -285,16 +327,18 @@
                             How AI Is Changing the Future of Work
                         </h3>
 
-                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                             From automation to creativity, AI is reshaping
                             how we work and learn.
                         </p>
 
                         <div
-                            class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                            class="mt-4 flex items-center justify-between border-t border-slate-200 pt-3 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+
                             <span>By Linn</span>
                             <span>Aug 23, 2025</span>
                             <span>◷ 6 min read</span>
+
                         </div>
 
                     </div>
@@ -303,11 +347,12 @@
 
                 <!-- Article 6 -->
                 <article
-                    class="overflow-hidden rounded-lg border border-slate-200 bg-white transition delay-100 duration-100 hover:-translate-y-1 hover:shadow-gray-300 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)]">
+                    class="overflow-hidden rounded-lg border border-slate-200 bg-white text-gray-900 transition duration-100 hover:-translate-y-1 hover:shadow-[3px_3px_6px_rgba(0,0,0,0.8)] dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=80"
+                    <img
+                        src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=80"
                         alt="Wireless earbuds"
-                        class="h-48 w-full object-cover hover:scale-110 delay-150 duration-300 ease-in-out">
+                        class="h-48 w-full object-cover transition duration-300 hover:scale-110">
 
                     <div class="p-4">
 
@@ -320,26 +365,27 @@
                             Best Wireless Earbuds of 2025
                         </h3>
 
-                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                        <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
                             Top picks for sound quality, battery life,
                             and value for money.
                         </p>
 
                         <div
-                            class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                            class="mt-4 flex items-center justify-between border-t border-slate-200 pt-3 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+
                             <span>By Vann</span>
                             <span>Aug 22, 2025</span>
                             <span>◷ 5 min read</span>
+
                         </div>
 
                     </div>
                 </article>
 
             </div>
-
         </div>
-
     </section>
+
 
     <!-- =========================
         NEWSLETTER
@@ -347,8 +393,12 @@
     <section class="relative overflow-hidden bg-[#0d1220]">
 
         <div class="absolute inset-0 opacity-10">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
-                alt="" class="h-full w-full object-cover">
+
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+                alt=""
+                class="h-full w-full object-cover">
+
         </div>
 
         <div
@@ -358,6 +408,7 @@
             <div class="text-white">
 
                 <div class="flex items-center gap-3">
+
                     <div class="flex h-8 w-8 items-center justify-center rounded-md bg-blue-600">
                         <span class="material-icons">mail</span>
                     </div>
@@ -365,6 +416,7 @@
                     <h2 class="text-xl font-bold">
                         Subscribe to Our Newsletter
                     </h2>
+
                 </div>
 
                 <p class="mt-3 max-w-xl text-sm text-slate-400">
@@ -374,27 +426,33 @@
 
             </div>
 
+
             <!-- Newsletter Form -->
             <form class="flex w-full max-w-xl flex-col gap-3 sm:flex-row">
 
-                <input type="email" placeholder="Enter your email address"
-                    class="h-12 flex-1 rounded-full border px-5 text-sm text-gray-600 bg-white outline-none hover:shadow-lg hover:shadow-blue-400/50">
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    class="h-12 flex-1 rounded-full border border-gray-300 bg-white px-5 text-sm text-gray-600 outline-none transition hover:shadow-lg hover:shadow-blue-400/50 dark:border-gray-700 dark:bg-gray-900 dark:text-white dark:placeholder:text-gray-400">
 
-                <button type="submit"
-                    class="h-12 rounded-full bg-blue-600 px-7 text-sm font-semibold text-white hover:bg-blue-700 hover:shadow-blue-600/50 hover:shadow-md">
+                <button
+                    type="submit"
+                    class="h-12 rounded-full bg-blue-600 px-7 text-sm font-semibold text-white hover:bg-blue-700 hover:shadow-md hover:shadow-blue-600/50">
                     Subscribe
                 </button>
 
             </form>
 
         </div>
-
     </section>
+
 
     <!-- =========================
         POPULAR CATEGORIES
     ========================== -->
-    <section id="categories" class="bg-white">
+    <section
+        id="categories"
+        class="bg-white text-gray-900 transition-colors dark:bg-gray-950 dark:text-white">
 
         <div class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
 
@@ -416,10 +474,10 @@
 
                 <!-- AI -->
                 <a href="#"
-                    class="rounded-xl border border-slate-200 p-7 text-center transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+                    class="rounded-xl border border-slate-200 bg-white p-7 text-center text-gray-900 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
                     <div
-                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-purple-50 text-purple-600">
+                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400">
                         <span class="material-icons">smart_toy</span>
                     </div>
 
@@ -427,7 +485,7 @@
                         AI
                     </h3>
 
-                    <p class="mt-3 text-xs leading-5 text-slate-500">
+                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
                         Artificial intelligence &
                         machine learning
                     </p>
@@ -437,9 +495,10 @@
 
                 <!-- Gadgets -->
                 <a href="#"
-                    class="rounded-xl border border-slate-200 p-7 text-center transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+                    class="rounded-xl border border-slate-200 bg-white p-7 text-center text-gray-900 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                    <div
+                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
                         <span class="material-icons">devices_other</span>
                     </div>
 
@@ -447,7 +506,7 @@
                         Gadgets
                     </h3>
 
-                    <p class="mt-3 text-xs leading-5 text-slate-500">
+                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
                         Reviews & latest
                         consumer devices
                     </p>
@@ -457,9 +516,10 @@
 
                 <!-- Software -->
                 <a href="#"
-                    class="rounded-xl border border-slate-200 p-7 text-center transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+                    class="rounded-xl border border-slate-200 bg-white p-7 text-center text-gray-900 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-sky-50 text-sky-600">
+                    <div
+                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-sky-50 text-sky-600 dark:bg-sky-950/50 dark:text-sky-400">
                         <span class="material-icons">terminal</span>
                     </div>
 
@@ -467,7 +527,7 @@
                         Software
                     </h3>
 
-                    <p class="mt-3 text-xs leading-5 text-slate-500">
+                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
                         Tools & development
                         news
                     </p>
@@ -477,10 +537,10 @@
 
                 <!-- Startups -->
                 <a href="#"
-                    class="rounded-xl border border-slate-200 p-7 text-center transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+                    class="rounded-xl border border-slate-200 bg-white p-7 text-center text-gray-900 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
                     <div
-                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-orange-500">
+                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50 text-orange-500 dark:bg-orange-950/50 dark:text-orange-400">
                         <span class="material-icons">rocket_launch</span>
                     </div>
 
@@ -488,7 +548,7 @@
                         Startups
                     </h3>
 
-                    <p class="mt-3 text-xs leading-5 text-slate-500">
+                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
                         Innovation & funding
                         updates
                     </p>
@@ -498,9 +558,10 @@
 
                 <!-- Cybersecurity -->
                 <a href="#"
-                    class="rounded-xl border border-slate-200 p-7 text-center transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md">
+                    class="rounded-xl border border-slate-200 bg-white p-7 text-center text-gray-900 transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md dark:border-slate-700 dark:bg-gray-900 dark:text-white">
 
-                    <div class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-red-50 text-red-500">
+                    <div
+                        class="mx-auto flex h-10 w-10 items-center justify-center rounded-lg bg-red-50 text-red-500 dark:bg-red-950/50 dark:text-red-400">
                         <span class="material-icons">security</span>
                     </div>
 
@@ -508,7 +569,7 @@
                         Cybersecurity
                     </h3>
 
-                    <p class="mt-3 text-xs leading-5 text-slate-500">
+                    <p class="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
                         Security tips &
                         protection
                     </p>
@@ -518,8 +579,8 @@
             </div>
 
         </div>
-
     </section>
+
 
     <!-- =========================
         FOOTER
@@ -535,7 +596,8 @@
 
                     <a href="#" class="flex items-center gap-2">
 
-                        <div class="flex h-7 w-7 items-center justify-center rounded-md bg-blue-600 text-sm">
+                        <div
+                            class="flex h-7 w-7 items-center justify-center rounded-md bg-blue-600 text-sm">
                             <span class="material-icons">bolt</span>
                         </div>
 
@@ -563,27 +625,39 @@
                     <ul class="mt-4 space-y-2 text-sm text-slate-400">
 
                         <li>
-                            <a href="#" class="hover:text-white">Home</a>
+                            <a href="#" class="hover:text-white">
+                                Home
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#" class="hover:text-white">AI</a>
+                            <a href="#" class="hover:text-white">
+                                AI
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#" class="hover:text-white">Gadgets</a>
+                            <a href="#" class="hover:text-white">
+                                Gadgets
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#" class="hover:text-white">Software</a>
+                            <a href="#" class="hover:text-white">
+                                Software
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#" class="hover:text-white">Startups</a>
+                            <a href="#" class="hover:text-white">
+                                Startups
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#" class="hover:text-white">Cybersecurity</a>
+                            <a href="#" class="hover:text-white">
+                                Cybersecurity
+                            </a>
                         </li>
 
                     </ul>
@@ -664,10 +738,10 @@
             </div>
 
         </div>
-
     </footer>
 
-    <script type="module" src="/src/main.ts"></script>
+
+<script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
