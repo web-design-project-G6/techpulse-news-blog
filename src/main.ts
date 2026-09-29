@@ -1,2 +1,5 @@
 import './style.css'
-import './theme.js'
+import './theme'
+import { initializeNavigation } from './navigation'
+
+document.addEventListener('DOMContentLoaded', initializeNavigation)
