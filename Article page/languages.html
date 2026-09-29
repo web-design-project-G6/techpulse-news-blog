@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechPulse - Python 3.14 with Free-Threading: True Parallelism</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- ================= MAIN ================= -->
+    <main class="max-w-4xl mx-auto px-6 py-10">
+
+        <a href="../pages/categories.html"
+            class="inline-block mb-6
+                   text-sm text-blue-600
+                   hover:text-blue-800
+                   hover:underline">
+
+            ← Back to News
+
+        </a>
+
+        <!-- ================= ARTICLE ================= -->
+        <article
+            class="bg-white rounded-lg
+                   border border-slate-200
+                   overflow-hidden shadow-sm">
+
+            <!-- ================= IMAGE ================= -->
+            <div class="relative">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                    alt="Python Programming and Free Threading"
+                    class="w-full h-72 md:h-96 object-cover">
+
+                <!-- Category -->
+                <span
+                    class="absolute top-4 left-4
+                           bg-blue-600 text-white
+                           px-3 py-1 rounded-md
+                           text-xs font-semibold">
+
+                    LANGUAGES
+
+                </span>
+
+            </div>
+
+            <div class="p-6 md:p-8">
+
+                <h1
+                    class="text-3xl md:text-4xl
+                           font-bold text-slate-900
+                           leading-tight">
+
+                    Python 3.14 with Free-Threading:
+                    True Parallelism
+
+                </h1>
+
+                <div
+                    class="flex items-center gap-3
+                           mt-5 text-sm text-slate-500">
+
+                    <div
+                        class="w-9 h-9 rounded-full
+                               bg-blue-100 text-blue-600
+                               flex items-center justify-center
+                               font-semibold">
+
+                        TP
+
+                    </div>
+
+                    <span>
+                        TechPulse News
+                    </span>
+
+                    <span>•</span>
+
+                    <span>
+                        Sep 29, 2026
+                    </span>
+
+                    <span>•</span>
+
+                    <span>
+                        6 min read
+                    </span>
+
+                </div>
+
+                <!-- Introduction -->
+                <p
+                    class="mt-7 text-slate-600
+                           leading-7">
+
+                    Python 3.14 is an important step in the development
+                    of Python's free-threading technology. Free-threaded
+                    builds allow the Global Interpreter Lock, or GIL, to
+                    be disabled so multiple Python threads can execute
+                    in parallel on available CPU cores.
+
+                </p>
+
+                <p
+                    class="mt-4 text-slate-600
+                           leading-7">
+
+                    Python 3.14 now officially supports free-threaded
+                    builds. The feature is still optional, but it gives
+                    developers a new way to use multi-core processors
+                    for workloads that can benefit from true parallel
+                    execution.
+
+                </p>
+
+                <!-- ================= SECTION 1 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        1. What Is Free-Threading?
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        Free-threading is a Python execution mode that
+                        allows the Global Interpreter Lock to be disabled.
+                        Without the GIL, multiple threads can execute
+                        Python code at the same time on different CPU cores.
+
+                    </p>
+
+                    <p
+                        class="mt-4 text-slate-600
+                               leading-7">
+
+                        This is especially important for CPU-intensive
+                        applications where developers want to use multiple
+                        processor cores inside a single Python process.
+
+                    </p>
+
+                </section>
+
+                <!-- ================= SECTION 2 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        2. Why Does the GIL Matter?
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        The Global Interpreter Lock is a mechanism used by
+                        standard CPython builds to protect Python objects
+                        when multiple threads are running. Traditionally,
+                        this means only one thread can execute Python code
+                        at a time within a process.
+
+                    </p>
+
+                    <div
+                        class="grid grid-cols-1
+                               md:grid-cols-2 gap-4 mt-5">
+
+                        <div
+                            class="bg-slate-50
+                                   border border-slate-200
+                                   rounded-lg p-5">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900 mb-2">
+
+                                Traditional Python
+
+                            </h3>
+
+                            <p
+                                class="text-sm
+                                       text-slate-600
+                                       leading-6">
+
+                                The GIL limits multiple threads from
+                                executing Python code at the same time
+                                for CPU-bound work.
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="bg-slate-50
+                                   border border-slate-200
+                                   rounded-lg p-5">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900 mb-2">
+
+                                Free-Threaded Python
+
+                            </h3>
+
+                            <p
+                                class="text-sm
+                                       text-slate-600
+                                       leading-6">
+
+                                The GIL can be disabled so multiple threads
+                                can execute Python code in parallel.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ================= SECTION 3 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        3. Python 3.14 Makes Free-Threading Official
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        Free-threaded Python was introduced experimentally
+                        in Python 3.13. With Python 3.14, the free-threaded
+                        build is officially supported and is no longer
+                        considered an experimental feature.
+
+                    </p>
+
+                    <div
+                        class="mt-5 bg-blue-50
+                               border border-blue-100
+                               rounded-lg p-6">
+
+                        <h3
+                            class="font-semibold
+                                   text-slate-900 mb-2">
+
+                            Important Change
+
+                        </h3>
+
+                        <p
+                            class="text-slate-600
+                                   leading-7">
+
+                            Python 3.14 keeps free-threading optional.
+                            Developers can choose a regular GIL-enabled
+                            build or use a free-threaded build when their
+                            application and dependencies support it.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- ================= SECTION 4 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        4. True Parallel Execution
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        The main advantage of free-threading is the ability
+                        to execute Python threads in parallel across
+                        available CPU cores. This can be useful for
+                        applications that perform significant CPU-bound
+                        computation.
+
+                    </p>
+
+                    <div
+                        class="grid grid-cols-1
+                               md:grid-cols-2 gap-4 mt-5">
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-5">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900 mb-2">
+
+                                Multi-Core CPUs
+
+                            </h3>
+
+                            <p
+                                class="text-sm
+                                       text-slate-600
+                                       leading-6">
+
+                                Multiple threads can make better use of
+                                available CPU cores when the workload
+                                supports parallel execution.
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-5">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900 mb-2">
+
+                                CPU-Bound Tasks
+
+                            </h3>
+
+                            <p
+                                class="text-sm
+                                       text-slate-600
+                                       leading-6">
+
+                                Compute-heavy workloads may benefit more
+                                from free-threading than traditional
+                                CPU-bound threading.
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-5">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900 mb-2">
+
+                                Shared Memory
+
+                            </h3>
+
+                            <p
+                                class="text-sm
+                                       text-slate-600
+                                       leading-6">
+
+                                Threads continue to share memory inside
+                                the same Python process.
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-5">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900 mb-2">
+
+                                Parallel Workloads
+
+                            </h3>
+
+                            <p
+                                class="text-sm
+                                       text-slate-600
+                                       leading-6">
+
+                                Applications designed for parallel work
+                                can potentially use multiple cores more
+                                effectively.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ================= SECTION 5 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        5. Free-Threading Is Not Automatically Faster
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        Free-threading does not automatically make every
+                        Python program faster. Applications still need to
+                        be designed carefully for concurrent execution.
+
+                    </p>
+
+                    <p
+                        class="mt-4 text-slate-600
+                               leading-7">
+
+                        Python's documentation also notes that free-threaded
+                        builds have additional overhead compared with normal
+                        GIL-enabled builds. The performance impact depends
+                        on the workload and hardware.
+
+                    </p>
+
+                </section>
+
+                <!-- ================= SECTION 6 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        6. Benefits for Developers
+
+                    </h2>
+
+                    <ul
+                        class="mt-4 list-disc
+                               list-inside space-y-2
+                               text-slate-600
+                               leading-7">
+
+                        <li>
+                            Use multiple CPU cores with Python threads.
+                        </li>
+
+                        <li>
+                            Run suitable CPU-bound tasks in parallel.
+                        </li>
+
+                        <li>
+                            Keep shared memory between threads.
+                        </li>
+
+                        <li>
+                            Explore new multi-threaded Python architectures.
+                        </li>
+
+                        <li>
+                            Build applications designed for modern
+                            multi-core hardware.
+                        </li>
+
+                        <li>
+                            Reduce dependence on process-based parallelism
+                            for some workloads.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+                <!-- ================= SECTION 7 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        7. Libraries Need to Adapt
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        Free-threading also affects Python packages,
+                        especially libraries that contain C or other native
+                        extension modules. These extensions need to support
+                        free-threaded execution correctly.
+
+                    </p>
+
+                    <p
+                        class="mt-4 text-slate-600
+                               leading-7">
+
+                        If an extension does not support free-threading,
+                        importing it can cause the GIL to be enabled again.
+                        This means developers need to check whether the
+                        libraries used by their applications support the
+                        free-threaded build.
+
+                    </p>
+
+                </section>
+
+                <!-- ================= SECTION 8 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        8. Challenges to Consider
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7 mb-5">
+
+                        Free-threaded Python introduces new opportunities,
+                        but developers also need to think carefully about
+                        thread safety, library compatibility, memory use,
+                        and application design.
+
+                    </p>
+
+                    <div class="space-y-3">
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-4">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900">
+
+                                Thread Safety
+
+                            </h3>
+
+                            <p
+                                class="text-sm text-slate-600
+                                       mt-1">
+
+                                Developers should use locks and other
+                                synchronization tools when shared data
+                                needs protection.
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-4">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900">
+
+                                Library Compatibility
+
+                            </h3>
+
+                            <p
+                                class="text-sm text-slate-600
+                                       mt-1">
+
+                                Some third-party packages may not yet be
+                                ready for free-threaded execution.
+
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="border border-slate-200
+                                   rounded-lg p-4">
+
+                            <h3
+                                class="font-semibold
+                                       text-slate-900">
+
+                                Memory Usage
+
+                            </h3>
+
+                            <p
+                                class="text-sm text-slate-600
+                                       mt-1">
+
+                                Free-threaded builds typically use more
+                                memory than standard Python builds.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ================= SECTION 9 ================= -->
+                <section class="mt-10">
+
+                    <h2
+                        class="text-2xl font-bold
+                               text-slate-900 mb-3">
+
+                        9. What Comes Next?
+
+                    </h2>
+
+                    <p
+                        class="text-slate-600
+                               leading-7">
+
+                        Python 3.14 makes free-threading an officially
+                        supported option and gives developers a clearer
+                        path toward multi-core Python applications.
+
+                    </p>
+
+                    <p
+                        class="mt-4 text-slate-600
+                               leading-7">
+
+                        As more libraries add support and developers gain
+                        experience with thread-safe programming, free-
+                        threaded Python could become increasingly useful
+                        for workloads that benefit from true parallel
+                        execution.
+
+                    </p>
+
+                </section>
+
+                <!-- ================= KEY POINTS ================= -->
+                <section class="mt-10">
+
+                    <div
+                        class="bg-slate-50
+                               border border-slate-200
+                               rounded-lg p-6">
+
+                        <h2
+                            class="text-xl font-bold
+                                   text-slate-900 mb-4">
+
+                            Key Points
+
+                        </h2>
+
+                        <ul
+                            class="list-disc
+                                   list-inside
+                                   space-y-2
+                                   text-slate-600
+                                   leading-7">
+
+                            <li>
+                                Python 3.14 officially supports
+                                free-threaded builds.
+                            </li>
+
+                            <li>
+                                Free-threading allows the GIL to be disabled.
+                            </li>
+
+                            <li>
+                                Multiple Python threads can execute in
+                                parallel on available CPU cores.
+                            </li>
+
+                            <li>
+                                Free-threading is still optional in
+                                Python 3.14.
+                            </li>
+
+                            <li>
+                                Libraries and applications need to support
+                                thread-safe free-threaded execution.
+                            </li>
+
+                            <li>
+                                Free-threaded builds can have additional
+                                memory and performance overhead.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </section>
+
+                <!-- Back Button -->
+                <a href="../pages/categories.html"
+                    class="inline-block mt-8
+                           bg-blue-600 text-white
+                           px-5 py-2.5 rounded-md
+                           hover:bg-blue-700
+                           hover:-translate-y-1
+                           transition">
+
+                    ← Back to News
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+</body>
+
+</html>
+
