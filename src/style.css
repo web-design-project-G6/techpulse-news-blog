@@ -1,2 +1,80 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+/* =====================================================
+  MOBILE NAVIGATION
+   ===================================================== */
+.mobile-menu {
+    display: none;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+    padding: 0.75rem 1.25rem 1rem;
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.mobile-menu a,
+.mobile-menu button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.875rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mobile-menu a {
+    color: #475569;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.mobile-menu button {
+    justify-content: flex-start;
+    border: 0;
+    background: transparent;
+    color: #475569;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.mobile-menu button:hover {
+    background: #f1f5f9;
+}
+
+.dark .mobile-menu {
+    border-color: #334155;
+    background: #1e293b;
+}
+
+.dark .mobile-menu a {
+    color: #cbd5e1;
+}
+
+.dark .mobile-menu a:hover,
+.dark .mobile-menu a.active {
+    color: #60a5fa;
+    background: #0f172a;
+}
+
+.dark .mobile-menu button {
+    color: #cbd5e1;
+}
+
+.dark .mobile-menu button:hover {
+    background: #0f172a;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu,
+    .mobile-menu.open {
+        display: none !important;
+    }
+}
