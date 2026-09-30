@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techpulse-news-blog.vercel.app/sitemap.xml
