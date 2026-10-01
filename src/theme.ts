@@ -8,7 +8,7 @@ function getSavedTheme() {
 }
 
 // Apply theme to the whole website
-function applyTheme(theme) {
+function applyTheme(theme: "dark" | "light") {
     const html = document.documentElement;
 
     if (theme === "dark") {
@@ -37,7 +37,7 @@ function initializeTheme() {
 
     // Use saved theme
     if (savedTheme) {
-        applyTheme(savedTheme);
+        applyTheme(savedTheme === "dark" ? "dark" : "light");
         return;
     }
 
@@ -50,7 +50,7 @@ function initializeTheme() {
 }
 
 // Toggle between light and dark
-function toggleTheme() {
+export function toggleTheme() {
     const html = document.documentElement;
 
     const isDark = html.classList.contains("dark");
